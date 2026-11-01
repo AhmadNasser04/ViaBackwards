@@ -44,6 +44,7 @@ public final class EntityPacketRewriter1_21_5 extends EntityRewriter<Clientbound
 
     @Override
     public void registerPackets() {
+        registerRemoveEntities(ClientboundPackets1_21_5.REMOVE_ENTITIES);
         protocol.replaceClientbound(ClientboundPackets1_21_5.ADD_ENTITY, wrapper -> {
             final int entityId = wrapper.passthrough(Types.VAR_INT);
 

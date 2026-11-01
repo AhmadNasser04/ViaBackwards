@@ -64,6 +64,7 @@ public class EntityPacketRewriter1_16 extends EntityRewriter<ClientboundPackets1
 
     @Override
     protected void registerPackets() {
+        registerRemoveEntities(ClientboundPackets1_16.REMOVE_ENTITIES);
         protocol.replaceClientbound(ClientboundPackets1_16.ADD_ENTITY, new PacketHandlers() {
             @Override
             public void register() {

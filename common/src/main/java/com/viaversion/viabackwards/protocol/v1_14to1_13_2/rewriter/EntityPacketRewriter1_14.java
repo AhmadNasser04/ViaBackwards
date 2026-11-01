@@ -54,6 +54,7 @@ public class EntityPacketRewriter1_14 extends LegacyEntityRewriter<ClientboundPa
 
     @Override
     protected void registerPackets() {
+        registerRemoveEntities(ClientboundPackets1_14.REMOVE_ENTITIES);
         positionHandler = new EntityPositionHandler(this, EntityPositionStorage1_14.class, EntityPositionStorage1_14::new);
 
         protocol.registerClientbound(ClientboundPackets1_14.ENTITY_EVENT, wrapper -> {
