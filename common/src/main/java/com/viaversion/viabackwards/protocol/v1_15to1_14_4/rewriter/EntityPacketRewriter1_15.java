@@ -39,7 +39,6 @@ public class EntityPacketRewriter1_15 extends EntityRewriter<ClientboundPackets1
 
     @Override
     protected void registerPackets() {
-        registerRemoveEntities(ClientboundPackets1_15.REMOVE_ENTITIES);
         protocol.registerClientbound(ClientboundPackets1_15.SET_HEALTH, wrapper -> {
             float health = wrapper.passthrough(Types.FLOAT);
             if (health > 0) return;

@@ -36,7 +36,6 @@ public class EntityPacketRewriter1_14_1 extends LegacyEntityRewriter<Clientbound
 
     @Override
     protected void registerPackets() {
-        registerRemoveEntities(ClientboundPackets1_14.REMOVE_ENTITIES);
         registerTracker(ClientboundPackets1_14.ADD_EXPERIENCE_ORB, EntityTypes1_14.EXPERIENCE_ORB);
         registerTracker(ClientboundPackets1_14.ADD_GLOBAL_ENTITY, EntityTypes1_14.LIGHTNING_BOLT);
         registerTracker(ClientboundPackets1_14.ADD_PAINTING, EntityTypes1_14.PAINTING);
